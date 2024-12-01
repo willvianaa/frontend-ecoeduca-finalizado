@@ -1,0 +1,77 @@
+<div class="container-reciclagem">
+  <!-- Topo com botão de voltar -->
+  <header class="top-bar">
+    <button class="btn-voltar" (click)="voltarHome()">Voltar</button>
+    <h1>Reciclagem do Lixo</h1>
+  </header>
+
+  <!-- Cartões explicativos das lixeiras -->
+  <section class="cards-lixeiras">
+    <div class="card azul">
+      <h2>Azul</h2>
+      <p>Tudo que for feito de Papel e papelão.</p>
+    </div>
+    <div class="card verde">
+      <h2>Verde</h2>
+      <p>Qualquer resíduo de Vidro.</p>
+    </div>
+    <div class="card amarela">
+      <h2>Amarela</h2>
+      <p>Qualquer objeto Metálico.</p>
+    </div>
+    <div class="card vermelha">
+      <h2>Vermelha</h2>
+      <p>Materiais feitos de Plásticos.</p>
+    </div>
+  </section>
+
+  <!-- Pergunta -->
+  <section class="pergunta">
+    <h2>Em que lixo devemos jogar o papel?</h2>
+    <div class="icone-lixo">
+   
+<img src="https://img.icons8.com/?size=100&id=QEEjVP9ciMYa&format=png&color=000000" alt="Ícone de Papel" />
+</div>
+<div class="opcoes-lixeiras">
+  <img
+    src="https://cdn-icons-png.flaticon.com/512/5142/5142514.png"
+    alt="Lixeira Azul"
+    class="lixeira"
+    (click)="verificarResposta('azul')"
+  />
+  <img
+    src="https://cdn-icons-png.flaticon.com/512/1208/1208469.png"
+    alt="Lixeira Verde"
+    class="lixeira"
+    (click)="verificarResposta('verde')"
+  />
+  <img
+    src="https://cdn-icons-png.flaticon.com/256/7299/7299445.png"
+    alt="Lixeira Amarela"
+    class="lixeira"
+    (click)="verificarResposta('amarela')"
+  />
+  <img
+    src="https://cdn-icons-png.flaticon.com/512/8957/8957831.png"
+    alt="Lixeira Vermelha"
+    class="lixeira"
+    (click)="verificarResposta('vermelha')" 
+      />
+    </div>
+  </section>
+
+  <!-- Feedback visual -->
+  <div *ngIf="mensagem" [ngClass]="{ 'feedback': true, 'sucesso': sucesso, 'erro': !sucesso }">
+    {{ mensagem }}
+  </div>
+
+  <!-- Botão de próxima atividade -->
+  <div class="proxima-atividade" *ngIf="proximaAtividadeDisponivel">
+    <button class="btn-proxima" (click)="proximaAtividade()">Próxima Atividade</button>
+  </div>
+</div>
+
+
+
+
+

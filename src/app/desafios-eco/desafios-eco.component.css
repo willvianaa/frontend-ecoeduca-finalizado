@@ -1,0 +1,205 @@
+/* Container geral */
+.container {
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(135deg, #ff6f61, #ff9f3d);
+  min-height: 100vh;
+  color: #9e0a0a;
+  padding: 20px;
+}
+
+/* Header */
+header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: #ffffff;
+}
+
+.btn-voltar {
+  background-color: #ff3d00;
+  padding: 12px 20px;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 20px;
+}
+
+.btn-voltar:hover {
+  background-color: #d00000;
+}
+
+/* Formulário */
+.formulario {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+h2 {
+  font-size: 1.8rem;
+  color: #b91004;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.input-group {
+  margin-bottom: 20px;
+}
+
+input[type="text"], textarea, input[type="file"] {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 2px solid #ccc;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+textarea {
+  resize: none;
+  height: 120px;
+}
+
+.preview img {
+  max-width: 100%;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+
+.btn-enviar {
+  background-color: #28a745;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-enviar:hover {
+  background-color: #218838;
+}
+
+/* Feed de postagens */
+.feed {
+  margin-top: 50px;
+}
+
+.postagem {
+  background-color: rgba(245, 242, 242, 0.9);
+  padding: 20px;
+  margin-bottom: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.post-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+h3 {
+  font-size: 1.6rem;
+  margin: 0;
+  color: #333;
+}
+
+.data {
+  font-size: 0.9rem;
+  color: #777;
+}
+
+.post-image {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.pontos {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #f3eaea;
+}
+
+.aviso {
+  background-color: #f9e2e2;
+  padding: 15px;
+  border-radius: 8px;
+  margin-top: 20px;
+  border-left: 5px solid #ff6f61;
+}
+
+.checklist {
+  list-style-type: none;
+  padding: 0;
+}
+
+.checklist li {
+  margin-bottom: 12px;
+}
+
+.checklist input {
+  margin-right: 10px;
+}
+
+.btn-deletar {
+  background-color: #ff3d00;
+  padding: 8px 15px;
+  color: white;
+  font-size: 14px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+}
+
+.btn-deletar:hover {
+  background-color: #d00000;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .container {
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  .formulario {
+    padding: 20px;
+    width: 90%;
+  }
+
+  .nome, .input-group {
+    width: 88%;
+  }
+
+  .btn-enviar {
+    width: 100%;
+  }
+
+  .postagem {
+    padding: 15px;
+  }
+
+  .post-image {
+    max-height: 300px;
+  }
+}

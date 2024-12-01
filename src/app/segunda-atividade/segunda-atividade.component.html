@@ -1,0 +1,52 @@
+<div class="activity">
+  <button routerLink="/home">Voltar para Home</button>
+  <h2>Classifique os Resíduos!</h2>
+  <p>Arraste os itens para o tipo de resíduo correto.</p>
+
+  <div class="materials">
+    <div
+      class="material"
+      (dragstart)="startDrag('plástico', $event)"
+      (touchstart)="startDrag('plástico', $event)"
+      (touchmove)="onTouchMove($event)"
+      (touchend)="onTouchEnd($event)"
+      draggable="true"
+    >
+      <img src="https://cdn-icons-png.freepik.com/128/7952/7952183.png" alt="Garrafa Plástica" />
+    </div>
+    <div
+      class="material"
+      (dragstart)="startDrag('orgânico', $event)"
+      (touchstart)="startDrag('orgânico', $event)"
+      (touchmove)="onTouchMove($event)"
+      (touchend)="onTouchEnd($event)"
+      draggable="true"
+    >
+      <img src="https://cdn-icons-png.freepik.com/256/17013/17013590.png" alt="Casca de Banana" />
+    </div>
+    <div
+      class="material"
+      (dragstart)="startDrag('metal', $event)"
+      (touchstart)="startDrag('metal', $event)"
+      (touchmove)="onTouchMove($event)"
+      (touchend)="onTouchEnd($event)"
+      draggable="true"
+    >
+      <img src="https://img.freepik.com/fotos-premium/latas-de-aluminio-em-fundo-branco_1040193-6580.jpg" alt="Lata de Alumínio" />
+    </div>
+  </div>
+
+  <div class="bins">
+    <div class="bin" (drop)="onDrop('plástico', $event)" (dragover)="allowDrop($event)">
+      plástico
+    </div>
+    <div class="bin" (drop)="onDrop('orgânico', $event)" (dragover)="allowDrop($event)">
+      orgânico
+    </div>
+    <div class="bin" (drop)="onDrop('metal', $event)" (dragover)="allowDrop($event)">
+      metal
+    </div>
+  </div>
+
+  <p class="feedback" *ngIf="feedback">{{ feedback }}</p>
+</div>

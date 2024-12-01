@@ -1,0 +1,225 @@
+/* Botão de próxima atividade */
+/* Reset geral */
+body, html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+  background-color: #e9f5ff;
+}
+
+/* Container principal */
+.container-reciclagem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+  background: linear-gradient(to bottom, #67d1f2, #0066cc);
+}
+
+/* Reset geral */
+body, html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+  background-color: #e9f5ff;
+}
+
+/* Container principal */
+.container-reciclagem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+  background: linear-gradient(to bottom, #67d1f2, #0066cc);
+}
+
+/* Topo */
+.top-bar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #005bb5;
+  color: white;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.top-bar h1 {
+  font-size: 1.8rem;
+  margin: 0;
+  text-transform: uppercase;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex: 30px;
+}
+
+.btn-voltar {
+  background-color: #003f7f;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn-voltar:hover {
+  background-color: #002a5c;
+  transform: scale(1.1);
+}
+
+/* Cartões das lixeiras */
+.cards-lixeiras {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
+
+.card {
+  width: 200px;
+  padding: 20px;
+  border-radius: 10px;
+  color: white;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.azul { background-color: #007bff; }
+.verde { background-color: #28a745; }
+.amarela { background-color: #ffc107; }
+.vermelha { background-color: #dc3545; }
+
+/* Pergunta */
+.pergunta {
+  margin-top: 50px;
+  text-align: center;
+  color: white;
+}
+
+.pergunta h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+.icone-lixo img {
+  width: 100px;
+  animation: pulse 2s infinite;
+}
+
+.opcoes-lixeiras {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.lixeira {
+  width: 70px;
+  cursor: pointer;
+  transition: transform 0.3s, filter 0.3s;
+}
+
+.lixeira:hover {
+  transform: scale(1.1);
+  filter: brightness(1.2);
+}
+
+/* Feedback visual */
+.feedback {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px 20px;
+  color: #fff;
+  font-size: 1rem;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 9999;
+  transition: opacity 0.5s ease;
+}
+
+.feedback.sucesso {
+  background-color: #28a745;
+}
+
+.feedback.erro {
+  background-color: #dc3545;
+}
+
+/* Botão Próxima Atividade */
+.btn-proxima {
+  margin-top: 20px;
+  padding: 12px 20px;
+  background-color: #005bb5;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn-proxima:hover {
+  background-color: #003f7f;
+  transform: scale(1.1);
+}
+
+/* Animação */
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .cards-lixeiras {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 90%;
+  }
+
+  .opcoes-lixeiras {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .lixeira {
+    width: 60px;
+  }
+
+  .top-bar h1 {
+    font-size: 1.2rem;
+  }
+
+  .btn-voltar {
+    padding: 8px 12px;
+    font-size: 0.9rem;
+  }
+
+  .btn-proxima {
+    font-size: 0.9rem;
+    padding: 10px 15px;
+  }
+}

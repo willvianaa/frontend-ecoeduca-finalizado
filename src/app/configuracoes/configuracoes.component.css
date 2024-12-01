@@ -1,0 +1,60 @@
+.settings-container {
+    position: absolute; /* Permite o posicionamento correto */
+    left: 22px; /* Posiciona à esquerda */
+    top: 12%; /* Centraliza verticalmente */
+    transform: translateY(-50%); /* Ajusta o alinhamento vertical */
+    z-index: 10; /* Garante que o botão fique visível acima de outros elementos */
+  }
+  
+  .settings-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    outline: none;
+  }
+  
+  .menu-icon {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #383434; /* Mantém o ícone visível */
+    margin: 4px 0;
+    border-radius: 2px;
+  }
+  
+  
+    
+    .settings-menu {
+      position: absolute;
+      top: 23px;
+      right: 10;
+      background-color: #f9f9f9;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      z-index: 100;
+    }
+    
+    .settings-menu ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    
+    .settings-menu li {
+      padding: 10px 15px;
+    }
+    
+    .settings-menu li a {
+      text-decoration: none;
+      color: #333;
+      display: block;
+    }
+    
+    .settings-menu li:hover {
+      background-color: #f0f0f0;
+      cursor: pointer;
+    }
+  
+     
+    

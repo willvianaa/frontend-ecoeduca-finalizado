@@ -1,0 +1,27 @@
+<div class="user-profile-container">
+    <div class="user-header">
+      <h1>Perfil do Usuário</h1>
+    </div>  
+  
+    <div class="user-avatar">
+      <img
+        src="https://cdn-icons-png.flaticon.com/512/4290/4290443.png"
+        alt="Avatar da Criança"
+        class="avatar"
+      />
+    </div>
+  
+    <div *ngIf="alunos" class="user-info">
+      <h1>Perfil do Aluno</h1>
+      <p><strong>Nome:</strong> {{ alunos.nome }}</p>
+      <p><strong>Idade:</strong> {{ alunos.idade }}</p>
+      <p><strong>Responsável:</strong> {{ alunos.responsavelNome }}</p>
+      <p><strong>Pontuação:</strong> {{ alunos.pontuacao }}</p>
+    </div>
+  
+    <div class="user-actions">
+
+      <button class="btn-voltar" (click)="voltarParaHome()">Voltar para Home</button>
+    </div>
+  </div>
+  

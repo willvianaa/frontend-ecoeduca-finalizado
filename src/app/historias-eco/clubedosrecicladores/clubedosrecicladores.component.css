@@ -1,0 +1,101 @@
+.clube-recicladores {
+    display: flexbox;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 80px;
+    background-color: rgb(187, 45, 156);
+    height: 90vh;
+   
+  }
+  
+  .imagem img {
+    width: 75%;
+    max-width: 300px;
+    height: auto;
+    margin-bottom: 20px;
+  }
+  
+  .texto {
+    background-color:  #00694f;
+    color: rgb(255, 255, 255);
+    border-radius: 15px;
+    padding: 15px;
+    margin-bottom: 20px;
+    font-size: 1.5em;
+    text-align: center;
+  }
+  
+   
+/* Container para organizar os botões */
+.botões button {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+/* Estilo base para os botões */
+ .botões {
+  background: linear-gradient(135deg, #4caf50, #81c784); /* Gradiente moderno */
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px; /* Cantos arredondados */
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave */
+  transition: all 0.3s ease; /* Suaviza as transições */
+  position: relative; /* Para animações */
+  overflow: hidden; /* Esconde efeitos fora do botão */
+}
+
+/* Efeito ao passar o mouse */
+.botões:hover {
+  background: linear-gradient(135deg, #388e3c, #66bb6a); /* Escurece o gradiente */
+  transform: translateY(-3px); /* Eleva o botão */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Aumenta a sombra */
+}
+
+/* Animação de clique */
+.botões:active {
+  transform: translateY(1px); /* Move levemente para baixo */
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2); /* Reduz a sombra */
+}
+
+/* Efeito visual ao clicar */
+.botões::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: width 0.3s ease, height 0.3s ease;
+}
+
+.botões:active::after {
+  width: 200%;
+  height: 200%;
+}
+
+/* Responsividade: empilhar botões em telas pequenas */
+@media (max-width: 600px) {
+  .button-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .botões {
+    width: 90%; /* Largura ajustada em telas pequenas */
+  }
+}
+
+
+  

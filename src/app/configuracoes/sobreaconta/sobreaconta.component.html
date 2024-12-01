@@ -1,0 +1,15 @@
+<div class="sobre-container">
+    <header class="top-bar">
+      <h1>Sobre a Conta</h1>
+    </header>
+  
+    <section class="sobre-conteudo" *ngIf="alunos">
+      <p><strong>Nome:</strong> {{ alunos.nome }}</p>
+      <p><strong>Idade:</strong> {{ alunos.idade }}</p>
+      <p><strong>Responsável:</strong> {{ alunos.responsavelNome }}</p>
+      <p><strong>Pontuação:</strong> {{ alunos.pontuacao }}</p>
+    </section>
+  
+    <button class="btn-voltar" (click)="voltarParaHome()">Voltar para Home</button>
+  </div>
+  

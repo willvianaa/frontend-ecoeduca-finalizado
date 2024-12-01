@@ -1,0 +1,64 @@
+
+<div class="container">
+    <div class="content first-content">
+        <div class="first-column">
+            <img src="https://github.com/nickdiegao/logo/blob/main/image-3-removebg-preview.png?raw=true" alt="logo" width="150px" height="150">
+            <p class="description description-primary">Já possui uma conta?</p>
+            <p class="description description-primary">Realize seu login</p>
+            <button id="signin" class="btn btn-primary" [routerLink]="['/login']">Login</button>
+        </div>    
+        <div class="second-column">
+            <p><h2 class="title title-second">Realize seu cadastro</h2>
+            <div class="social-media">
+                <ul class="list-social-media">
+                    <a class="link-social-media" href="#">
+                        <li class="item-social-media">
+                            <i class="fab fa-facebook-f"></i>        
+                        </li>
+                    </a>
+                    <a class="link-social-media" href="#">
+                        <li class="item-social-media">
+                            <i class="fab fa-google-plus-g"></i>
+                        </li>
+                    </a>
+                </ul>
+            </div><!-- social media -->
+            <p class="description description-second">ou cadastre-se com</p>
+            <!-- src/app/app.component.html -->
+           <form class="form" id="cadastroDeUsuario" (ngSubmit)="onSubmit()">
+              <label class="label-input" for="">
+                <i class="far fa-user icon-modify"></i>
+                <input type="text" placeholder="Nome" id="nome" [(ngModel)]="user.nome" name="nome" required>
+              </label>
+            
+              <label class="label-input" for="">
+                <i class="fas fa-birthday-cake icon-modify"></i>
+                <input type="number" placeholder="Idade" id="idade" [(ngModel)]="user.idade" name="idade" required>
+              </label>
+            
+              <label class="label-input" for="">  
+                <i class="far fa-envelope icon-modify"></i>
+                <input type="email" placeholder="Email" id="email" [(ngModel)]="user.email" name="email" required>
+              </label>
+            
+              <label class="label-input" for="">
+                <i class="fas fa-lock icon-modify"></i>
+                <input type="password" placeholder="Senha" id="senha" [(ngModel)]="user.senha" name="senha" required>
+              </label>
+            
+              <!-- Seleção de Responsável -->
+              <label class="label-input" for="">
+                <i class="fas fa-user-tie icon-modify"></i>
+                <input type="number" placeholder="ID do Responsável" id="responsavel" [(ngModel)]="user.responsavel.id" name="responsavelId" required>
+              </label>
+
+              <label class="label-input" for="">
+                  <i class="fas fa-user-tie icon-modify"></i>
+                  <input type="number" placeholder="ID do Segundo Responsável" id="responsaveis" [(ngModel)]="user.responsaveis.id" name="responsavelId" required>
+                </label>
+            
+              <button class="btn btn-second" type="submit">Cadastrar</button>        
+            </form>                        
+    </div><!-- second column -->
+    </div><!-- first content -->
+

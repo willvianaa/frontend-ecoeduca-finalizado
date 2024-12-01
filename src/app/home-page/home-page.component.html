@@ -1,0 +1,71 @@
+<div class="homepage">
+  <header class="header">
+    <app-configuracoes></app-configuracoes>
+    <h1 class="title">EcoEduca</h1>
+    <div class="user-icon">
+      <img
+        src="https://cdn-icons-png.flaticon.com/512/4290/4290443.png"
+        alt="Usuário"
+        class="icon"
+        (click)="abrirPerfilUsuario()"
+      />
+    </div>
+  </header>
+
+  <section class="sections">
+    <a routerLink="/mapa" class="card card-mapa">
+      <img src="https://img.icons8.com/color/48/000000/map.png" alt="Mapa de Coleta">
+      <h3>Mapa de Coleta</h3>
+      <p>Descubra os pontos de coleta seletiva mais próximos e contribua com o meio ambiente!</p>
+    </a>
+
+    <a routerLink="/histórias" class="card card-historias">
+      <img src="https://img.icons8.com/color/48/000000/book.png" alt="Histórias Ecológicas">
+      <h3>Histórias Ecológicas</h3>
+      <p>Leia narrativas inspiradoras sobre sustentabilidade e preservação ambiental.</p>
+    </a>
+
+    <a routerLink="/reciclagem" class="card card-rec">
+      <img src="https://img.icons8.com/?size=100&id=BgaP42GOHJwU&format=png&color=000000" alt="Reciclagem do Lixo">
+      <h3>Reciclagem do Lixo</h3>
+      <p>Aprenda sobre materiais recicláveis e como separar resíduos corretamente.</p>
+    </a>
+
+    <a routerLink="/desafios" class="card card-desafios">
+      <img src="https://img.icons8.com/color/48/000000/trophy.png" alt="Desafios Ecológicos">
+      <h3>Desafios Ecológicos</h3>
+      <p>Participe de desafios interativos e suba no ranking ecológico!</p>
+    </a>
+  </section>
+</div>
+
+  <!-- Rodapé -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h4>Sobre o EcoEduca</h4>
+        <p>
+          EcoEduca é uma plataforma educativa que promove a sustentabilidade por
+          meio de conteúdo interativo e práticas ecológicas. Junte-se a nós para
+          transformar o mundo!
+        </p>
+      </div>
+      <div class="footer-section">
+        <h4>Links Úteis</h4>
+        <ul>
+          <li><a routerLink="/mapa">Mapa de Coleta</a></li>
+          <li><a routerLink="/histórias">Histórias Ecológicas</a></li>
+          <li><a routerLink="/reciclagem">Reciclagem</a></li>
+          <li><a routerLink="/desafios">Desafios</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Contato</h4>
+        <p>Email: ecoeduca24&#64;gmail.com</p>
+        <p>Youtube: Ecoeduca</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>🌱 Juntos por um futuro mais verde! 🌿</p>
+    </div>
+  </footer>

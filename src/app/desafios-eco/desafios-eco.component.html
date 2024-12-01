@@ -1,0 +1,55 @@
+<div class="container">
+  <header>
+    <h1>Desafios Ecológicos</h1>
+    <button class="btn-voltar" routerLink="/home">Voltar para Home</button>
+  </header>
+
+  <!-- Formulário para adicionar postagens -->
+  <section class="formulario">
+    <h2>Envie seu Desafio</h2>
+    <div class="input-group">
+      <input type="text" placeholder="Seu nome" [(ngModel)]="nome" class="nome"/>
+    </div>
+    <div class="input-group">
+      <textarea placeholder="Descrição do desafio" [(ngModel)]="descricao" class="descricao"></textarea>
+    </div>
+    <div class="input-group">
+      <input type="file" (change)="onImageSelected($event)" accept="image/*"/>
+      <div *ngIf="imagem" class="preview">
+        <h4>Pré-visualização da imagem:</h4>
+        <img [src]="imagemUrl" alt="Imagem selecionada">
+      </div>
+    </div>
+
+    <button (click)="adicionarPostagem()" class="btn-enviar">Enviar</button>
+  </section>
+
+  <!-- Feed de postagens -->
+  <section class="feed">
+    <h2>Postagens</h2>
+    <div *ngFor="let postagem of postagens" class="postagem">
+      <div class="post-header">
+        <h3>{{ postagem.nome }}</h3>
+        <p class="data">{{ postagem.dataCriacao | date: 'dd/MM/yyyy HH:mm' }}</p>
+      </div>
+      <img [src]="'http://localhost:8080' + postagem.imagemUrl" alt="{{ postagem.nome }}" class="post-image" />
+      <p>{{ postagem.descricao }}</p>
+      <span class="pontos">Pontuação: {{ postagem.pontos }}</span>
+
+      <div class="aviso">
+        <h4>Aviso: Não esqueça de levar este desafio para a escola!</h4>
+        <ul class="checklist">
+          <li *ngFor="let item of postagem.checkList; let i = index">
+            <input
+              type="checkbox"
+              [checked]="item.feito"
+              (change)="marcarCheckList(postagem, i)"
+            />
+            <label>{{ item.item }}</label>
+          </li>
+        </ul>
+        <button (click)="deletarPostagem(postagem.id)" class="btn-deletar">Excluir</button>
+      </div>
+    </div>
+  </section>
+</div>

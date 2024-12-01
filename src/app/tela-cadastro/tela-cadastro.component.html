@@ -1,0 +1,44 @@
+
+<div class="container">
+    <div class="content first-content">
+        <div class="first-column">
+            <img src="https://github.com/nickdiegao/logo/blob/main/image-3-removebg-preview.png?raw=true" alt="logo" width="150px" height="150">   
+            <p class="description description-primary">Não possui conta?</p>
+            <button id="signin" class="btn btn-primary" [routerLink]="['/']">Cadastrar</button>
+        </div>    
+        <div class="second-column">
+            <p><h2 class="title title-second">Realize seu Login</h2>
+            <div class="social-media">
+                <ul class="list-social-media">
+                    <a class="link-social-media" href="#">
+                        <li class="item-social-media">
+                            <i class="fab fa-facebook-f"></i>        
+                        </li>
+                    </a>
+                    <a class="link-social-media-google" href="#">
+                        <li class="item-social-media-google">
+                            <i class="fab fa-google-plus-g"></i>
+                        </li>
+                    </a>
+                </ul>
+            </div><!-- social media -->
+            <p class="description description-second">ou entre com</p>
+            <!-- src/app/app.component.html -->
+            <form class="form" id="cadastroDeUsuario">
+                <label class="label-input" for="">
+                  <i class="far fa-envelope icon-modify"></i>
+                  <input type="text" placeholder="Email" id="email" [(ngModel)]="loginData.email" name="email" required>
+                </label>
+              
+                <label class="label-input" for="">
+                  <i class="fas fa-lock icon-modify"></i>
+                  <input type="password" placeholder="Senha" id="senha" [(ngModel)]="loginData.senha" name="senha" required>
+                </label>
+              
+                <button class="btn btn-second" type="submit" (click)="onSubmit()">Entrar</button>        
+              </form>                       
+    </div><!-- second column -->
+    </div><!-- first content -->
+
+
+

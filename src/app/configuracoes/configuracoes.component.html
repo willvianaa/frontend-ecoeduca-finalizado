@@ -1,0 +1,19 @@
+<div class="settings-container">
+    <!-- Botão de configurações -->
+    <button class="settings-button" (click)="toggleMenu()">
+      <span class="menu-icon"></span>
+      <span class="menu-icon"></span>
+      <span class="menu-icon"></span>
+    </button>
+  
+    <!-- Menu suspenso -->
+    <div class="settings-menu" *ngIf="menuOpen">
+      <ul>
+        <li><a href="\ecoeduca-config">Configurações</a></li>
+        <li><a href="\sobre-conta">Sobre a conta</a></li>
+        <li><a href="\pontuacao">Pontuação</a></li>
+        <li><a (click)="onLogout()">Sair</a></li>
+      </ul>
+    </div>
+  </div>
+  

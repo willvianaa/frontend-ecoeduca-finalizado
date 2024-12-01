@@ -1,0 +1,14 @@
+<div class="pedro-mar">
+    <div class="imagem">
+      <img [src]="historias[historiaAtual].imagem" alt="Imagem da história" />
+    </div>
+    <div class="texto">
+      <p>{{ historias[historiaAtual].texto }}</p>
+    </div>
+    <div class="botoes">
+      <button routerLink="/maria-arvore">História Anterior</button>
+      <button (click)="voltar()" [disabled]="historiaAtual === 0">Voltar</button>
+      <button (click)="avancar()" [disabled]="historiaAtual === historias.length - 1">Avançar</button>
+      <button routerLink="/ana-desafios">Próxima História</button>
+    </div>
+  </div>

@@ -1,0 +1,21 @@
+<div class="configuracoes-container">
+    <header class="top-bar">
+      <h1>Configurações da Conta</h1>
+    </header>
+  
+    <section class="configuracoes-opcoes">
+      <div class="opcao">
+        <label for="nomeUsuario">Alterar Nome de Usuário</label>
+        <input id="nomeUsuario" type="text" placeholder="Digite seu novo nome" [(ngModel)]="nome" class="digiteaqui"/>
+        <button (click)="onSalvarNome()">Salvar Nome</button>
+      </div>
+      <div class="opcao">
+        <label for="novaSenha">Alterar Senha</label>
+        <input id="novaSenha" type="password" placeholder="Digite sua nova senha" [(ngModel)]="senha" />
+        <button (click)="onSalvarSenha()">Salvar Senha</button>
+      </div>
+    </section>
+  
+    <button class="btn-voltar" (click)="voltarParaHome()">Voltar para Home</button>
+  </div>
+  

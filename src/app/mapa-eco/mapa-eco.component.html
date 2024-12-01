@@ -1,0 +1,41 @@
+<div class="tela-completa">
+  <div class="mapa">
+    <!-- <script async
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAH3ogbY6FpwpozNkN4ah_tO_cyFFZtlJI&callback=initMap">
+    </script> -->
+    <h1>Mapa de Coleta</h1>
+    <p>Aqui você encontra os pontos de coleta seletiva próximos a você!</p>
+    <button routerLink="/home">Voltar para Home</button>
+    
+    <div class="container">
+      <input placeholder="Buscar..." class="js-search" type="text" (input)="onSearch($event)">
+      <i class="fa fa-search"></i>
+      <ul *ngIf="suggestions.length > 0" class="suggestions-list">
+        <li *ngFor="let suggestion of suggestions" (click)="onSelectSuggestion(suggestion)">
+          {{ suggestion.description }}
+        </li>
+      </ul>
+    </div>
+  </div>  
+
+  <div class="address-container">
+    <button (click)="updateMapLocation('R. Joaquim Nabuco, 778 - Madalena, Recife - PE, 50050-290')" class="address-button">
+      Uninassau - Graças - Bloco C
+    </button>
+    <button (click)="updateMapLocation('Shopping Recife R. Padre Carapuceiro, 777 - Boa Viagem, Recife - PE, 51020-900')" class="address-button">
+      Shopping Recife - Boa Viagem
+    </button>
+  </div>
+
+  <div class="google-maps">
+    <google-map 
+      [center]="center" 
+      [zoom]="zoom" 
+      style="height: 500px; width: 100%;">
+      <map-marker *ngFor="let marker of markers" 
+                  [position]="marker.position" 
+                  [title]="marker.title">
+      </map-marker>
+    </google-map>
+  </div>
+</div>

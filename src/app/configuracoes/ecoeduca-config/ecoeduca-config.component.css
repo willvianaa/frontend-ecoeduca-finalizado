@@ -1,0 +1,122 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    background-color: #e3f2fd; /* Azul claro suave */
+  }
+  
+  .configuracoes-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    min-height: 100vh;
+    color: #f1f1f1;
+  }
+  
+  .top-bar {
+    width: 100%;
+    text-align: center;
+    background-color: #0d47a1; /* Azul escuro */
+    padding: 15px;
+    color: #f1f1f1;
+    border-bottom: 2px solid #1565c0; /* Azul um pouco mais claro */
+  }
+  
+  .top-bar h1 {
+    margin: 0;
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  .configuracoes-opcoes {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 500px;
+    margin: 30px auto;
+    gap: 20px;
+  }
+  
+  .opcao {
+    background-color: #1e88e5; /* Azul mais escuro */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  }
+  
+  .opcao label {
+    font-size: 1.2rem;
+    display: block;
+    margin-bottom: 10px;
+    color: #e3f2fd; /* Azul claro */
+  }
+  
+  .opcao input {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    margin-bottom: 10px;
+    border-radius: 6px;
+    border: none;
+    background-color: #1565c0; /* Azul intermediário */
+    color: #ffffff;
+  }
+  
+  .opcao input::placeholder {
+    color: #90caf9; /* Azul bem claro */
+  }
+  
+  .opcao button {
+    width: 100%;
+    padding: 10px;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 6px;
+    background-color: #0d47a1; /* Azul escuro */
+    color: #e3f2fd; /* Azul claro */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .opcao button:hover {
+    background-color: #1565c0;
+  }
+  
+  .btn-voltar {
+    background-color: #1565c0;
+    color: #e3f2fd;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+    margin-top: 20px;
+  }
+  
+  .btn-voltar:hover {
+    background-color: #0d47a1;
+  }
+  
+  /* Responsividade */
+  @media (max-width: 768px) {
+    .configuracoes-opcoes {
+      width: 90%;
+    }
+  
+    .top-bar h1 {
+      font-size: 1.5rem;
+    }
+
+    #nomeUsuario {
+      width: 90%;
+    }
+
+    #novaSenha {
+      width: 90%;
+    }
+}
+  
