@@ -31,7 +31,7 @@ export class SobreacontaComponent {
   }
 
   getAluno(id: number): void {
-    this.http.get<Aluno>(`http://localhost:8080/alunos/${id}`).subscribe(
+    this.http.get<Aluno>(`https://ecoeduca.duckdns.org/alunos/${id}`).subscribe(
       response => {
         console.log('Dados do aluno:', response);  // Adicione um log para depuração
         this.alunos = response;

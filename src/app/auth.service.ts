@@ -7,8 +7,8 @@ import { Observable } from 'rxjs';
 })
 export class AuthService {
 
-  private apiUrl = 'http://localhost:8080/login'; // A URL do endpoint de login no backend
-  private apiUrlAlunos = 'http://localhost:8080/alunos';
+  private apiUrl = 'https://ecoeduca.duckdns.org/login'; // A URL do endpoint de login no backend
+  private apiUrlAlunos = 'https://ecoeduca.duckdns.org/login';
 
   constructor(private http: HttpClient) { }
 

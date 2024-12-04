@@ -25,7 +25,7 @@ export class PontuacaoComponent implements OnInit {
 
   // Carregar o ranking do backend
   getRanking(): void {
-    this.http.get<UsuarioPontuacao[]>('http://localhost:8080/alunos/ranking').subscribe(
+    this.http.get<UsuarioPontuacao[]>('https://ecoeduca.duckdns.org/alunos/ranking').subscribe(
       (response) => {
         // Ordenar por pontos em ordem decrescente
         const sortedRanking = response.sort((a, b) => b.pontuacao - a.pontuacao);
