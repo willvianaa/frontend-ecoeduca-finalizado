@@ -208,3 +208,9 @@ input:-webkit-autofill
     }
     
 }
+
+.description-success {
+    color: #4CAF50;
+    font-weight: bold;
+    margin-top: 10px;
+}
