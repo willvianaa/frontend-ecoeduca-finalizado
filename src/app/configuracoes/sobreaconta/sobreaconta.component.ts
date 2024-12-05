@@ -4,6 +4,7 @@ import { AuthService } from '../../auth.service';
 import { HttpClient } from '@angular/common/http';
 
 export interface Aluno {
+nomeDoResponsavel: any;
   nome: string;
   email: string;
   idade: number;

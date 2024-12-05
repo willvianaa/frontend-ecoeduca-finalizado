@@ -6,7 +6,7 @@ import { Router } from '@angular/router';
 export interface Aluno {
   nome: string;
   idade: number;
-  responsavelNome: string;
+  nomeDoResponsavel: string;
   pontuacao: number;
 }
 

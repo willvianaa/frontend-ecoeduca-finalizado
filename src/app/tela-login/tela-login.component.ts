@@ -19,12 +19,8 @@ export class TelaLoginComponent {
     idade: null, // Idade do usuário
     email: '', // Email do usuário
     senha: '', // Senha do usuário
-    responsavel: {
-      nome: '', // Nome do responsável
-    },
-    responsaveis: {
-      nome: '', // Nome do segundo responsável
-    },
+    nomeDoResponsavel: '',
+    nomeDoResponsavel2: ''
   };
   sucesso: boolean | undefined;
 
@@ -43,12 +39,8 @@ export class TelaLoginComponent {
         idade: this.user.idade,
         email: this.user.email,
         senha: this.user.senha,
-        responsavel: {
-            nome: this.user.responsavel.nome
-        },
-        responsaveis: {
-            nome: this.user.responsaveis.nome
-        }
+        nomeDoResponsavel: this.user.nomeDoResponsavel,
+        nomeDoResponsavel2: this.user.nomeDoResponsavel2
     };
 
     this.http.post(url, usuario).subscribe(

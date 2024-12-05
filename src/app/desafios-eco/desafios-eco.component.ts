@@ -113,7 +113,7 @@ export class DesafiosEcoComponent implements AfterViewChecked {
   }
 
   deletarPostagem(id: number): void {
-    this.http.delete(`https://ecoeduca.duckdns.org/postagens`).subscribe(
+    this.http.delete(`hhttps://ecoeduca.duckdns.org/postagens`).subscribe(
       (response) => {
         console.log('Postagem excluída com sucesso!', response);
         this.postagens = this.postagens.filter((postagem) => postagem.id !== id);
@@ -128,4 +128,3 @@ export class DesafiosEcoComponent implements AfterViewChecked {
     this.router.navigate(['/home']);  // Navegar para a página inicial
   }
   }
-
