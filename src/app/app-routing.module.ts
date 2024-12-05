@@ -25,7 +25,7 @@ import { UserProfileComponent } from './home-page/user-profile/user-profile.comp
 import { AuthGuard } from './auth.guard';
 
 const routes: Routes = [
-  { path: '', component:  TelaLoginComponent}, // Rota inicial (login)
+  { path: '', component: HomePageComponent}, // Rota inicial (login)
   { path: 'login', component: TelaCadastroComponent},
   { path: '', redirectTo: '/login', pathMatch: 'full'},
   { path: 'home', component: HomePageComponent, canActivate: [AuthGuard]},
